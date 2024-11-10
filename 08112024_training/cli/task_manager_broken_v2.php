@@ -5,13 +5,11 @@ class Task {
     private $title;
     private $description;
 
-
     public function __construct($id, $title, $description) {
         $this->id = $id;
         $this->title = $title;
         $this->description = $description;
     }
-
 
     public function setTitle($title) {
         $this->title = $title;
@@ -20,7 +18,6 @@ class Task {
     public function setDescription($description) {
         $this->description = $description;
     }
-
 
     public function displayTask() {
         echo "ID: " . $this->id . "\n";
@@ -54,7 +51,6 @@ function createTask(&$tasks) {
     end($tasks);
     $lastKey = key($tasks);
     $id = $lastKey + 1;
-    
 
     $tasks[$id] = new Task($id, $title, $description);
     echo "Task Created.\n";
@@ -84,7 +80,7 @@ function deleteTask(&$tasks) {
         echo "Task ID not found.\n";
     }
 }
-$choice = '';
+
 while (true) {
     echo "\nToDo List CLI Application\n";
     echo "1. Create Task\n";
